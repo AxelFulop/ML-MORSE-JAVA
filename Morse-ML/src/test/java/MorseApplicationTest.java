@@ -1,13 +1,13 @@
-import controller.MorseController;
-import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
-import org.junit.runners.Suite.SuiteClasses;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@RunWith(Suite.class)
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+@RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = MorseApplication.class)
-@SuiteClasses({
-        MorseController.class
-})
 public class MorseApplicationTest {
+
+    @Test
+    public void  appTest(){}
 }

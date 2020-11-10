@@ -20,5 +20,15 @@ dependencies {
     //compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.0.0.RELEASE'
     testCompile group: 'org.mockito', name: 'mockito-core', version: '2.1.0'
+}
 
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Jar File Example',
+                'Implementation-Version': "1.0.0",
+                'Main-Class': 'MorseApplication'
+    }
+    baseName = 'meli-morse'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
 }

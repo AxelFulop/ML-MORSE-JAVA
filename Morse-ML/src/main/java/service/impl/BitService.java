@@ -14,7 +14,7 @@ public class BitService implements BitServiceI {
             morse.append(parsePulseToDotOrDash(pulsesStats.getLengths().get(i), pulsesStats));
             morse.append(parseSpaceToEmptyOrNextLetter(spacesStats.getLengths().get(i), spacesStats));
         }
-        return morse.toString();
+        return morse.toString().trim();
     }
 
     @Override
