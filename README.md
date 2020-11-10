@@ -40,11 +40,11 @@ En caso de que el texto ingresado no sea binario puro, se produce una excepcion.
 # Forma de uso local:
 
 * Transformar morse a texto (separar palabras por doble espacio)
-$ curl -X POST "localhost:8080/translate/2text" -d "{text: '.... --- .-.. .- -- . .-.. ..'}"
+$ curl -X POST "localhost:8080/translate/2Text" -d "{text: '.... --- .-.. .- -- . .-.. ..'}"
 { code:200, response: 'HOLA MELI'}
 
 * Transformar texto a morse
-$ curl -X POST "localhost:8080//translate/2morse" -d "{text: 'HOLA MELI'}"
+$ curl -X POST "localhost:8080/translate/2Morse" -d "{text: 'HOLA MELI'}"
 { code:200, response: '.... --- .-.. .- -- . .-.. ..'}
  
  # Forma de uso web:
