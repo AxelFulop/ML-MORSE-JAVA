@@ -46,10 +46,19 @@ $ curl -X POST "localhost:8080/translate/2text" -d "{text: '.... --- .-.. .- -- 
 * Transformar texto a morse
 $ curl -X POST "localhost:8080//translate/2morse" -d "{text: 'HOLA MELI'}"
 { code:200, response: '.... --- .-.. .- -- . .-.. ..'}
-  
+ 
+ # Forma de uso web:
+
+* Transformar morse a texto (separar palabras por doble espacio)
+$ curl -X POST "http://meli-challenge.us-east-1.elasticbeanstalk.com/translate/2Text" -d "{text: '.... --- .-.. .- -- . .-.. ..'}"
+{ code:200, response: 'HOLA MELI'}
+
+* Transformar texto a morse
+$ curl -X POST "http://meli-challenge.us-east-1.elasticbeanstalk.com/translate/2Morse" -d "{text: 'HOLA MELI'}"
+{ code:200, response: '.... --- .-.. .- -- . .-.. ..'}
   
 # Notas
- * En caso de ingresar un caracter NO valido dentro de los esperados, se disparará un Exception. En caso de estar siendo ejecutado desde la API devolverá un Bad Request (Error 400).
+ * En caso de ingresar un caracter NO valido dentro de los esperados, se disparará un Exception. En caso de estar siendo ejecutado desde la API devolverá un Bad Request (Error 406, code 400).
  
  * Se utiliza como fin de mensaje una pausa prolongada.
  
