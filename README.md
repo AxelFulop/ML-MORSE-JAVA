@@ -53,7 +53,7 @@ $ curl -X POST "localhost:8080/translate/2Morse" -d "{text: 'HOLA MELI'}"
 $ curl -X POST "http://meli-challenge.us-east-1.elasticbeanstalk.com/translate/2Text" -d "{text: '.... --- .-.. .- -- . .-.. ..'}"
 { code:200, response: 'HOLA MELI'}
 
-(Si da error) => usar curl -i -X POST -H "Content-Type: application/json" -d '{"text": ".... --- .-.. .- -- . .-.. .."'}  http://meli-challenge.us-east-1.elasticbeanstalk.com/translate/2Text
+(Si da error) => usar curl -i -X POST -H "Content-Type: application/json" -d '{"text": ".... --- .-.. .- -- . .-.. .."}'  http://meli-challenge.us-east-1.elasticbeanstalk.com/translate/2Text
 { code:200, response: 'HOLA MELI'}
 
 
@@ -61,7 +61,7 @@ $ curl -X POST "http://meli-challenge.us-east-1.elasticbeanstalk.com/translate/2
 $ curl -X POST "http://meli-challenge.us-east-1.elasticbeanstalk.com/translate/2Morse" -d "{text: 'HOLA MELI'}"
 { code:200, response: '.... --- .-.. .- -- . .-.. ..'}
 
-(Si da error) => usar curl -i -X POST -H "Content-Type: application/json" -d '"{text: 'HOLA MELI'}"'  http://meli-challenge.us-east-1.elasticbeanstalk.com/translate/2Morse
+(Si da error) => usar curl -i -X POST -H "Content-Type: application/json" -d '{"text": "HOLA MELI"}'  http://meli-challenge.us-east-1.elasticbeanstalk.com/translate/2Morse
 { code:200, response: '.... --- .-.. .- -- . .-.. ..'}
   
 # Notas
