@@ -7,28 +7,30 @@ Dependencias base:
 
 # MorseController
 
-decodeMorseToText: Metodo que recibe un texto en codigo morse y devuelve la tradducion en español.
-endpoint: /2Text
-method: Post
-Body: {"text" : {".... --- .-.. .-  -- . .-.. .."}
-Response OK: { code:200, response: 'HOLA MELI'}
-Response NO OK:
+* decodeMorseToText: Metodo que recibe un texto en codigo morse y devuelve la tradducion en español.
+* endpoint: /2Text
+* method: Post
+* Body: {"text" : {".... --- .-.. .-  -- . .-.. .."}
+* Response OK: { code:200, response: 'HOLA MELI'}
+* Response NO OK:
 En caso de que el texto ingresado no sea morse, se produce una excepcion.
 
-decodeTextToMorse: Metodo que recibe un texto en español y devuelve la tradducion en codigo morse.
-endpoint: /2Text
-method: Post
-Body: {"text" : {"HOLA MELI"}
-Response OK: { code:200, response: '".... --- .-.. .-  -- . .-.. ..'}
-Response NO OK:
+------------********---------------
+* decodeTextToMorse: Metodo que recibe un texto en español y devuelve la tradducion en codigo morse.
+* endpoint: /2Text
+* method: Post
+* Body: {"text" : {"HOLA MELI"}
+* Response OK: { code:200, response: '".... --- .-.. .-  -- . .-.. ..'}
+* Response NO OK:
 En caso de que el texto ingresado no sea texto puro, se produce una excepcion.
 
-decodeBinToMorse: Metodo que recibe un texto en binario y devuelve la tradducion en codigo morse.
-endpoint: /2Text
-method: Post
-Body: {"text" : {"HOLA MELI"}
-Response OK: { code:200, response: '".... --- .-.. .-  -- . .-.. ..'}
-Response NO OK:
+------------********--------------
+* decodeBinToMorse: Metodo que recibe un texto en binario y devuelve la tradducion en codigo morse.
+* endpoint: /2Text
+* method: Post
+* Body: {"text" : {"HOLA MELI"}
+* Response OK: { code:200, response: '".... --- .-.. .-  -- . .-.. ..'}
+* Response NO OK:
 En caso de que el texto ingresado no sea binario puro, se produce una excepcion.
 
 
