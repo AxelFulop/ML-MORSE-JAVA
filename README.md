@@ -12,7 +12,8 @@ Dependencias base:
 * method: Post
 * Body: {"text" : {".... --- .-.. .-  -- . .-.. .."}
 * Response OK: { code:200, response: 'HOLA MELI'}
-* Response NO OK:
+* Response NO OK: {  "code": 400,"response": "El texto ingresado no es del tipo morse"}
+
 En caso de que el texto ingresado no sea morse, se produce una excepcion.
 
 ------------********---------------
@@ -21,7 +22,8 @@ En caso de que el texto ingresado no sea morse, se produce una excepcion.
 * method: Post
 * Body: {"text" : {"HOLA MELI"}
 * Response OK: { code:200, response: '".... --- .-.. .-  -- . .-.. ..'}
-* Response NO OK:
+* Response NO OK: { "code": 400,"response": "El texto ingresado no es del tipo texto"}
+
 En caso de que el texto ingresado no sea texto puro, se produce una excepcion.
 
 ------------********--------------
@@ -30,7 +32,8 @@ En caso de que el texto ingresado no sea texto puro, se produce una excepcion.
 * method: Post
 * Body: {"text" : {"00000000110110110011100000111111000111111001111110000111011111111011101110000000110001111110000011111100111110000000110000110111111110111011100000011011100000000000"}
 * Response OK: { code:200, response: '".... --- .-.. .-  -- . .-.. ..'}
-* Response NO OK:
+* Response NO OK: { "code": 400,"response": "El texto ingresado no es del tipo binario"}
+
 En caso de que el texto ingresado no sea binario puro, se produce una excepcion.
 
 
