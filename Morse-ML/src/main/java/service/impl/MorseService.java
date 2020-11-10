@@ -63,8 +63,7 @@ public class MorseService implements MorseServiceI {
         }
     };
 
-    @Autowired
-    BitServiceI bitService;
+    BitServiceI bitService = new BitService();
 
 
     @Override
